@@ -2,19 +2,20 @@
   :description "An example integration of cljs-oops"
   :url "https://github.com/binaryage/cljs-oops-sample"
 
-  :dependencies [[org.clojure/clojure "1.8.0"]
+  :dependencies [[org.clojure/clojure "1.9.0-alpha12"]
+                 ;[org.clojure/clojure "1.8.0"]
+                 ;[clojure-future-spec "1.9.0-alpha12"]
                  [org.clojure/clojurescript "1.9.229"]
-                 [clojure-future-spec "1.9.0-alpha11" :scope "provided"]
-                 [org.clojure/core.async "0.2.385"]
-                 [binaryage/oops "0.1.0-SNAPSHOT"]
+                 [org.clojure/core.async "0.2.391"]
+                 [binaryage/oops "0.1.0"]
                  [binaryage/devtools "0.8.1"]
                  [com.cognitect/transit-clj "0.8.288"]
                  [cljs-http "0.1.41"]
                  [environ "1.1.0"]
-                 [figwheel "0.5.6"]]
+                 [figwheel "0.5.7"]]
 
-  :plugins [[lein-cljsbuild "1.1.3"]
-            [lein-figwheel "0.5.6"]
+  :plugins [[lein-cljsbuild "1.1.4"]
+            [lein-figwheel "0.5.7"]
             [lein-shell "0.5.0"]
             [lein-environ "1.1.0"]]
 
@@ -39,9 +40,8 @@
                                                    :output-dir      "resources/public/_compiled/demo"
                                                    :asset-path      "_compiled/demo"
                                                    :main            oops.demo.main
-                                                   :external-config {:devtools/config {:features-to-install :all}
-                                                                     :oops/config     {:runtime-error-reporting-mode   :console
-                                                                                       :runtime-warning-reporting-mode :console}}
+                                                   :external-config {:oops/config     {:runtime-error-reporting   :console
+                                                                                       :runtime-warning-reporting :console}}
                                                    :preloads        [devtools.preload]
                                                    :optimizations   :none}}}}}
              ; --------------------------------------------------------------------------------------------------------------

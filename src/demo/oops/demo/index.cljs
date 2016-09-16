@@ -1,7 +1,7 @@
 (ns oops.demo.index
   (:require-macros [oops.demo.logging :refer [log info]])
   (:require [oops.demo.main :refer [boot!]]
-            [oops.core :refer [oget oset! ocall oapply ocall! oapply!]]))
+            [oops.core :refer [oget oget+ oset! ocall oapply ocall! oapply!]]))
 
 (boot! "/src/demo/oops/demo/index.cljs")
 
@@ -20,10 +20,5 @@
 (log (oget o ["nested"] [["nested-key"]]))
 
 (log (oget o :missing-key))
-
-(log (oget o #js ["key"]))
-(log (oget o #js ["key" :val]))
-
-(log (oget o ["a" "b" 42]))
 
 ; <-- MEAT STOPS HERE ---
