@@ -23,7 +23,7 @@
 
 (log (oget o "k2.miss"))                                                                                                      ; access a missing key
 ; ERROR: Oops, Missing expected object key 'miss' on key path 'k2.miss'
-; => undefined
+; => null
 
 (log (oget o "k3.k31.?maybe"))                                                                                                ; for potentially missing keys use "soft" access
 ; => null
@@ -42,12 +42,10 @@
 ; => true
 
 (log (oget o (identity "k1")))                                                                                                ; unexpected dynamic selector
-; compiler warning: Oops, Unexpected dynamic property access
+; compiler warning: Oops, Unexpected dynamic selector usage
 ; => "v1"
 
 (log (oget+ o (identity "k1")))                                                                                               ; expected dynamic selector, no warnigns
 ; => "v1"
-
-
 
 ; <-- MEAT STOPS HERE ---
