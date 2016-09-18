@@ -8,7 +8,7 @@
                  [org.clojure/clojurescript "1.9.229"]
                  [org.clojure/core.async "0.2.391"]
                  [binaryage/oops "0.1.0"]
-                 [binaryage/devtools "0.8.1"]
+                 [binaryage/devtools "0.8.2"]
                  [com.cognitect/transit-clj "0.8.288"]
                  [cljs-http "0.1.41"]
                  [environ "1.1.0"]
