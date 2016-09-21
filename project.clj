@@ -7,7 +7,7 @@
                  ;[clojure-future-spec "1.9.0-alpha12"]
                  [org.clojure/clojurescript "1.9.229"]
                  [org.clojure/core.async "0.2.391"]
-                 [binaryage/oops "0.1.0"]
+                 [binaryage/oops "0.3.0"]
                  [binaryage/devtools "0.8.2"]
                  [com.cognitect/transit-clj "0.8.288"]
                  [cljs-http "0.1.41"]
@@ -40,8 +40,8 @@
                                                    :output-dir      "resources/public/_compiled/demo"
                                                    :asset-path      "_compiled/demo"
                                                    :main            oops.demo.main
-                                                   :external-config {:oops/config     {:runtime-error-reporting   :console
-                                                                                       :runtime-warning-reporting :console}}
+                                                   :external-config {:oops/config {:runtime-error-reporting   :console
+                                                                                   :runtime-warning-reporting :console}}
                                                    :preloads        [devtools.preload]
                                                    :optimizations   :none}}}}}
              ; --------------------------------------------------------------------------------------------------------------
