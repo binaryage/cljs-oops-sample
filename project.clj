@@ -23,7 +23,7 @@
 
   :source-paths ["src/demo"]
 
-  :clean-targets ^{:protect false} ["resources/public/_compiled"
+  :clean-targets ^{:protect false} ["resources/public/.compiled"
                                     "target"]
 
   :checkout-deps-shares ^:replace []                                                                                          ; http://jakemccrary.com/blog/2015/03/24/advanced-leiningen-checkouts-configuring-what-ends-up-on-your-classpath/
@@ -36,9 +36,9 @@
              :demo
              {:cljsbuild {:builds {:demo
                                    {:source-paths ["src/demo"]
-                                    :compiler     {:output-to       "resources/public/_compiled/demo/main.js"
-                                                   :output-dir      "resources/public/_compiled/demo"
-                                                   :asset-path      "_compiled/demo"
+                                    :compiler     {:output-to       "resources/public/.compiled/demo/main.js"
+                                                   :output-dir      "resources/public/.compiled/demo"
+                                                   :asset-path      ".compiled/demo"
                                                    :main            oops.demo.main
                                                    :external-config {:oops/config {:runtime-error-reporting   :console
                                                                                    :runtime-warning-reporting :console}}
