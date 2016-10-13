@@ -21,12 +21,18 @@
 
   ; =========================================================================================================================
 
+  ; reset :base profile
+  :test-paths ^:replace []
+  :checkout-deps-shares ^:replace []                                                                                          ; http://jakemccrary.com/blog/2015/03/24/advanced-leiningen-checkouts-configuring-what-ends-up-on-your-classpath/
+
+  ; for Cursive
   :source-paths ["src/demo"]
+  :resource-paths ^:replace ["resources"
+                             "scripts"]
 
   :clean-targets ^{:protect false} ["resources/public/.compiled"
                                     "target"]
 
-  :checkout-deps-shares ^:replace []                                                                                          ; http://jakemccrary.com/blog/2015/03/24/advanced-leiningen-checkouts-configuring-what-ends-up-on-your-classpath/
 
   ; =========================================================================================================================
 
