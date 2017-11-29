@@ -2,20 +2,20 @@
   :description "An example integration of cljs-oops"
   :url "https://github.com/binaryage/cljs-oops-sample"
 
-  :dependencies [[org.clojure/clojure "1.9.0-alpha17"]
+  :dependencies [[org.clojure/clojure "1.9.0-RC2"]
                  ;[org.clojure/clojure "1.8.0"]
                  ;[clojure-future-spec "1.9.0-alpha16-1"]
-                 [org.clojure/clojurescript "1.9.562"]
-                 [org.clojure/core.async "0.3.443"]
-                 [binaryage/oops "0.5.5"]
-                 [binaryage/devtools "0.9.4"]
+                 [org.clojure/clojurescript "1.9.946"]
+                 [org.clojure/core.async "0.3.465"]
+                 [binaryage/oops "0.5.6"]
+                 [binaryage/devtools "0.9.7"]
                  [com.cognitect/transit-clj "0.8.300"]
-                 [cljs-http "0.1.43"]
+                 [cljs-http "0.1.44"]
                  [environ "1.1.0"]
-                 [figwheel "0.5.10"]]
+                 [figwheel "0.5.14"]]
 
   :plugins [[lein-cljsbuild "1.1.6"]
-            [lein-figwheel "0.5.10"]
+            [lein-figwheel "0.5.14"]
             [lein-shell "0.5.0"]
             [lein-environ "1.1.0"]]
 
