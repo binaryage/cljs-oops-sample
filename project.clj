@@ -4,7 +4,7 @@
 
   :dependencies [[org.clojure/clojure "1.9.0-RC2"]
                  ;[org.clojure/clojure "1.8.0"]
-                 ;[clojure-future-spec "1.9.0-alpha16-1"]
+                 ;[clojure-future-spec "1.9.0-beta4"]
                  [org.clojure/clojurescript "1.9.946"]
                  [org.clojure/core.async "0.3.465"]
                  [binaryage/oops "0.5.6"]
@@ -70,14 +70,7 @@
 
   ; =========================================================================================================================
 
-  :aliases {"demo"     ["with-profile" "+demo,+figwheel"
-                        "figwheel"]
-            "dev-demo" ["with-profile" "+demo,+figwheel,+checkouts"
-                        "figwheel"]
-            "cljs"     ["with-profile" "+demo"
-                        "cljsbuild" "auto"]
-            "present"  ["with-profile" "+demo"
-                        "do"
-                        "clean,"
-                        "cljsbuild" "once,"
-                        "shell" "scripts/dev-server.sh"]})
+  :aliases {"demo"     ["with-profile" "+demo,+figwheel" "figwheel"]
+            "dev-demo" ["with-profile" "+demo,+figwheel,+checkouts" "figwheel"]
+            "cljs"     ["with-profile" "+demo" "cljsbuild" "auto"]
+            "present"  ["shell" "scripts/present.sh"]})

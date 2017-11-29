@@ -10,6 +10,7 @@ DEVSERVER_PORT=7000
 
 pushd "$DEVSERVER_ROOT"
 
+echo "Starting presentation server at http://localhost:$DEVSERVER_PORT"
 python -m SimpleHTTPServer "$DEVSERVER_PORT"
 
 popd
