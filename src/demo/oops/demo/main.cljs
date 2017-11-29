@@ -1,5 +1,6 @@
 (ns oops.demo.main
-  (:require-macros [cljs.core.async.macros :refer [go]])
+  (:require-macros [cljs.core.async.macros :refer [go]]
+                   [oops.helpers :refer [unchecked-aset]])
   (:require [cljs-http.client :as http]
             [cljs.core.async :refer [<!]]
             [clojure.string :as string]))
@@ -21,7 +22,7 @@
   (go
     (let [response (<! (http/get source-path))
           block (.querySelector js/document "code")]
-      (aset block "innerHTML" (escape-html (get-meat (:body response))))
+      (unchecked-aset block "innerHTML" (escape-html (get-meat (:body response))))
       (.highlightBlock js/hljs block))))
 
 (defn boot! [source-path]

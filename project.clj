@@ -7,8 +7,8 @@
                  ;[clojure-future-spec "1.9.0-beta4"]
                  [org.clojure/clojurescript "1.9.946"]
                  [org.clojure/core.async "0.3.465"]
-                 [binaryage/oops "0.5.6"]
-                 [binaryage/devtools "0.9.7"]
+                 [binaryage/oops "0.5.8"]
+                 [binaryage/devtools "0.9.8"]
                  [com.cognitect/transit-clj "0.8.300"]
                  [cljs-http "0.1.44"]
                  [environ "1.1.0"]
@@ -49,6 +49,7 @@
                                                    :external-config {:oops/config {:runtime-error-reporting   :console
                                                                                    :runtime-warning-reporting :console}}
                                                    :preloads        [devtools.preload]
+                                                   :checked-arrays  :warn                                                     ; see https://github.com/binaryage/cljs-oops/issues/14
                                                    :optimizations   :none}}}}}
              ; --------------------------------------------------------------------------------------------------------------
              :checkouts
