@@ -3,17 +3,17 @@
   :url "https://github.com/binaryage/cljs-oops-sample"
 
   :dependencies [[org.clojure/clojure "1.9.0"]
-                 [org.clojure/clojurescript "1.10.238"]
+                 [org.clojure/clojurescript "1.10.439"]
                  [org.clojure/core.async "0.4.474"]
-                 [binaryage/oops "0.6.2"]
+                 [binaryage/oops "0.6.3"]
                  [binaryage/devtools "0.9.10"]
-                 [com.cognitect/transit-clj "0.8.309"]
+                 [com.cognitect/transit-clj "0.8.313"]
                  [cljs-http "0.1.45"]
                  [environ "1.1.0"]
-                 [figwheel "0.5.16"]]
+                 [figwheel "0.5.17"]]
 
   :plugins [[lein-cljsbuild "1.1.7"]
-            [lein-figwheel "0.5.16"]
+            [lein-figwheel "0.5.17"]
             [lein-shell "0.5.0"]
             [lein-environ "1.1.0"]]
 
