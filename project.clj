@@ -4,8 +4,8 @@
 
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [org.clojure/clojurescript "1.10.439"]
-                 [org.clojure/core.async "0.4.474"]
-                 [binaryage/oops "0.6.3"]
+                 [org.clojure/core.async "0.4.490"]
+                 [binaryage/oops "0.6.4"]
                  [binaryage/devtools "0.9.10"]
                  [com.cognitect/transit-clj "0.8.313"]
                  [cljs-http "0.1.45"]
