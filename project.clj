@@ -24,7 +24,8 @@
   :checkout-deps-shares ^:replace []                                                                                          ; http://jakemccrary.com/blog/2015/03/24/advanced-leiningen-checkouts-configuring-what-ends-up-on-your-classpath/
 
   ; for Cursive
-  :source-paths ["src/demo"]
+  :source-paths ["src/demo"
+                 "src/playground"]
   :resource-paths ^:replace ["resources"
                              "scripts"]
 
@@ -50,6 +51,19 @@
                                                    :checked-arrays  :warn                                                     ; see https://github.com/binaryage/cljs-oops/issues/14
                                                    :optimizations   :none}}}}}
              ; --------------------------------------------------------------------------------------------------------------
+             :playground
+             {:cljsbuild {:builds {:playground
+                                   {:source-paths ["src/playground"]
+                                    :compiler     {:output-to       "resources/public/.compiled/playground/main.js"
+                                                   :output-dir      "resources/public/.compiled/playground"
+                                                   :asset-path      ".compiled/playground"
+                                                   :main            oops.playground.main
+                                                   :external-config {:oops/config {:runtime-error-reporting   :console
+                                                                                   :runtime-warning-reporting :console
+                                                                                   :static-nil-target-object :error}}
+                                                   :preloads        [devtools.preload]
+                                                   :optimizations   :none}}}}}
+             ; --------------------------------------------------------------------------------------------------------------
              :checkouts
              {:checkout-deps-shares ^:replace [:source-paths
                                                :test-paths
@@ -69,7 +83,8 @@
 
   ; =========================================================================================================================
 
-  :aliases {"demo"     ["with-profile" "+demo,+figwheel" "figwheel"]
-            "dev-demo" ["with-profile" "+demo,+figwheel,+checkouts" "figwheel"]
-            "cljs"     ["with-profile" "+demo" "cljsbuild" "auto"]
-            "present"  ["shell" "scripts/present.sh"]})
+  :aliases {"demo"       ["with-profile" "+demo,+figwheel" "figwheel"]
+            "dev-demo"   ["with-profile" "+demo,+figwheel,+checkouts" "figwheel"]
+            "cljs"       ["with-profile" "+demo" "cljsbuild" "auto"]
+            "playground" ["with-profile" "+playground" "cljsbuild" "once"]
+            "present"    ["shell" "scripts/present.sh"]})
